@@ -11,18 +11,19 @@ if (userEmail) {
 // false, 0, -0, BigInt 0n, "", null, undefined, NaN
 
 //truthy values
-// "0", 'false', " ", [], {}, function(){}
+// "0" (written in string is truthy value), 'false'(written in string is truthy value), " ", [], {}, function(){}
 
 // if (userEmail.length === 0) {
 //   console.log("Array is empty");
-// }
 
 const emptyObj = {};
 
+// Object.keys(emptyObj) gives an array
 if (Object.keys(emptyObj).length === 0) {
   console.log("Object is empty");
 }
 
+// Note false == 0 and false == '' and 0 == '' gives true
 // Nullish Coalescing Operator (??): null undefined
 
 let val1;
@@ -39,3 +40,5 @@ console.log(val1);
 
 const iceTeaPrice = 100;
 iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80");
+
+// }
